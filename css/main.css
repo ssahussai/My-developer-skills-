@@ -17,12 +17,14 @@
   }
   input {
       text-align: center;
+      border: 4px solid rgb(111, 214, 111);
       border-radius: .3rem;
       font-size: 1.3rem;
   }
   #button {
     font-size: 1.3rem;
     color: rgb(148, 195, 128);
+    border: 4px solid rgb(111, 214, 111);
   }
 
   .list {
@@ -33,7 +35,8 @@
       list-style-type: none;
       padding-bottom: 15px;
   }
-  .button {
-      background-color: tomato;
+  .buttonX {
+      background-color: rgb(222, 102, 105);
   }
+
  
