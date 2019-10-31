@@ -38,3 +38,4 @@ function removeButton(btn) {
 }
 
 
+//when i remove the element it comes back when i add a new element right afrer. 
