@@ -16,8 +16,8 @@ function init() {
 }
 
 function generateUI() {
-    return newSkills.map(skill => {
-        return`<li><button class="buttonX">X</button> ${skill}</li>`;  
+    return newSkills.map((skill, id) => {
+        return`<li data-id="${id}"><button class="buttonX">X</button> ${skill}</li>`;  
     });
 }
 
@@ -29,13 +29,13 @@ function clickHandler(evt) {
 }
 
 function render() {
-    if(!newSkills.length) return;
     $('.list').html(generateUI().join(""));
 }
 
-function removeButton(btn) {
-    $(this).remove();
+function removeButton(evt) {
+    let selectedIndex = parseInt($(evt.target).parent()[0].dataset.id);
+    newSkills.splice(selectedIndex, 1);
+    render();
 }
 
 
-//when i remove the element it comes back when i add a new element right afrer. 
